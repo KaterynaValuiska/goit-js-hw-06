@@ -6,5 +6,3 @@ console.log("Number of categories:", categories.children.length);
     console.log("Elements:", category.lastElementChild.children.length);
 });
     
-
-
