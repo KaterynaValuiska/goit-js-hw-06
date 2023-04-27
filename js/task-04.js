@@ -9,6 +9,7 @@ const reduceClick = () => {
     computer.textContent = counterValue;
 };
 btnDecrement.addEventListener("click", reduceClick);
+
 const addClick = () => {
     counterValue += 1;
     computer.textContent = counterValue;
