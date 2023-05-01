@@ -14,9 +14,10 @@ function createBoxes(amount) {
     box.style.width = i * 10 + 30 + 'px';
     box.style.height = i*10 + 30 + 'px';
     box.style.backgroundColor = getRandomHexColor();
-    console.log(box); 
+    
     boxes.append(box);
   } 
+  
 }
 
 function onCreateBoxes() {
@@ -29,7 +30,6 @@ btnCreate.addEventListener("click", onCreateBoxes);
 function onDestroyBoxes() {
   input.value = 0
   boxes.innerHTML = "";
-  console.log(boxes);
 }
 btnDestroy.addEventListener("click", onDestroyBoxes);
 
