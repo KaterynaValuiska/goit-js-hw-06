@@ -8,29 +8,31 @@ const btnDestroy = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 const input = document.querySelector('input');
 
-
-
 function createBoxes(amount) {
-  amount = input.value;
   for (let i = 0; i < amount; i += 1) {
     let box = document.createElement('div');
     box.style.width = i * 10 + 30 + 'px';
     box.style.height = i*10 + 30 + 'px';
     box.style.backgroundColor = getRandomHexColor();
     console.log(box); 
-    boxes.before(box);
+    boxes.append(box);
   } 
 }
 
-btnCreate.addEventListener("click", createBoxes);
+function onCreateBoxes() {
+  let amount = input.value;
+  createBoxes(amount);
+}
+
+btnCreate.addEventListener("click", onCreateBoxes);
+
+function onDestroyBoxes() {
+  input.value = 0
+  boxes.innerHTML = "";
+  console.log(boxes);
+}
+btnDestroy.addEventListener("click", onDestroyBoxes);
 
 
-btnDestroy.addEventListener("click", () => {
-  
-  btnDestroy.removeEventListener("click", createBoxes);
-  box.remove();
-});
 
-
-
-
+ 
