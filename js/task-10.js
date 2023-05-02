@@ -14,7 +14,6 @@ function createBoxes(amount) {
     box.style.width = i * 10 + 30 + 'px';
     box.style.height = i*10 + 30 + 'px';
     box.style.backgroundColor = getRandomHexColor();
-    
     boxes.append(box);
   } 
   
@@ -23,6 +22,7 @@ function createBoxes(amount) {
 function onCreateBoxes() {
   let amount = input.value;
   createBoxes(amount);
+  
 }
 
 btnCreate.addEventListener("click", onCreateBoxes);
