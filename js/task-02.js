@@ -6,14 +6,15 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-
+const list = document.querySelector("ul#ingredients");
+const array = [];
 ingredients.forEach(ingredient => {
   const itemIng = document.createElement('li');
   itemIng.textContent = ingredient;
   itemIng.classList.add('item')
   console.log(itemIng);
+  array.push(itemIng);
 
-  const list = document.querySelector("ul#ingredients");
-  list.append(itemIng);
 });
- 
+
+list.append(...array);
